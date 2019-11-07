@@ -1,0 +1,82 @@
+@import "./vars.scss";
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url(./assets/fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Quicksand', sans-serif;
+  src: url(./assets/fonts/Quicksand-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Quicksand', sans-serif;
+  src: url(./assets/fonts/Quicksand-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Quicksand', sans-serif;
+  src: url(./assets/fonts/Quicksand-Bold.ttf);
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  // only works in chrome
+}
+
+body {
+  line-height: 1.6;
+  font-size: 14px;
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+// Buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+a[class^='btn-primary']:hover {
+  color: $brand-blue;
+}
+
+.btn {
+  &-primary {
+    @extend %btn-shared;
+    color: #fff;
+    background-color: $brand-red;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+  }
+}
