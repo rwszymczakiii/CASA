@@ -162,7 +162,7 @@ nav #secondary-nav-links .menu-wrap .hamburger > div {
 }
 
 nav #secondary-nav-links .menu-wrap .hamburger > div::before, nav #secondary-nav-links .menu-wrap .hamburger > div::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 1;
   top: -10px;
@@ -181,8 +181,12 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
   overflow: hidden;
+  z-index: -1;
+}
+
+.fullscreen-video-wrap img {
+  width: 100%;
 }
 
 .fullscreen-video-wrap video {

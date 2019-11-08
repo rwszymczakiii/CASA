@@ -64,8 +64,8 @@ nav {
           margin-left: 10rem;
 
           li {
-
-            a {}
+            a {
+            }
           }
         }
       }
@@ -79,8 +79,7 @@ nav {
         opacity: 0;
 
         &:checked {
-
-          +.hamburger>div {
+          + .hamburger > div {
             transform: rotate(135deg);
 
             &:before,
@@ -90,16 +89,15 @@ nav {
             }
           }
 
-          &:hover+.hamburger>div {
+          &:hover + .hamburger > div {
             transform: rotate(225deg);
           }
 
-          ~.menu {
+          ~ .menu {
             visibility: visible;
 
-            >div {
-
-              >div {
+            > div {
+              > div {
                 opacity: 1;
                 margin-left: -30rem;
                 transition: all 0.4s ease 0.4s;
@@ -119,7 +117,7 @@ nav {
         align-items: center;
         justify-content: center;
 
-        >div {
+        > div {
           position: relative;
           flex: none;
           width: 100%;
@@ -132,7 +130,7 @@ nav {
 
           &::before,
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             z-index: 1;
             top: -10px;
@@ -147,7 +145,6 @@ nav {
         }
       }
     }
-
   }
 }
 
@@ -157,8 +154,12 @@ nav {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
   overflow: hidden;
+  z-index: -1;
+
+  img {
+    width: 100%;
+  }
 
   video {
     min-width: 100%;
