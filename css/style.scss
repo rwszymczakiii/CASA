@@ -62,11 +62,6 @@ nav {
           display: flex;
           flex-direction: row;
           margin-left: 10rem;
-
-          li {
-            a {
-            }
-          }
         }
       }
 
@@ -233,7 +228,6 @@ nav {
     border: none;
 
     img {
-      color: #000;
       z-index: 2;
       width: 100px;
       height: auto;

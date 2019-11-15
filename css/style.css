@@ -269,7 +269,6 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
 }
 
 #showcase-content button img {
-  color: #000;
   z-index: 2;
   width: 100px;
   height: auto;
