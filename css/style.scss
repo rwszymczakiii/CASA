@@ -227,6 +227,10 @@ nav {
     background: 0%;
     border: none;
 
+    &:focus {
+      outline: none;
+    }
+
     img {
       z-index: 2;
       width: 100px;
@@ -269,6 +273,10 @@ nav {
 
     p {
       margin-right: 1rem;
+    }
+
+    #my-github:hover {
+      color: $brand-blue;
     }
   }
 }

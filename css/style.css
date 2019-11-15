@@ -268,6 +268,10 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   border: none;
 }
 
+#showcase-content button:focus {
+  outline: none;
+}
+
 #showcase-content button img {
   z-index: 2;
   width: 100px;
@@ -322,5 +326,9 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
 
 #showcase-content footer p {
   margin-right: 1rem;
+}
+
+#showcase-content footer #my-github:hover {
+  color: #00437A;
 }
 /*# sourceMappingURL=style.css.map */
