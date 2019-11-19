@@ -11,25 +11,16 @@
   <link rel="stylesheet" href="./css/hamburger.css">
 </head>
 
-<body class="bg-grad bg-opaque">
+<body>
   <!-- navbar -->
   <nav>
-    <a href="#" id="logo">
+    <a href="./index.html" id="logo">
       <img src="./assets/img/casa-logo.svg" alt="casa-logo">
     </a>
-
-    <div id="title">
-      <h1>
-        <a href="#">
-          Goochland <span class="text-red">CASA</span>
-        </a>
-      </h1>
-    </div>
-    <ul id="primary-nav-links">
-      <li><a routerLink="/volunteer" class="btn-primary">Volunteer</a></li>
-      <li><a routerLink="/donate" class="btn-primary">Donate</a></li>
-    </ul>
+    <h1 id="title">Goochland CASA</h1>
     <ul id="secondary-nav-links">
+      <li><a href="#">Volunteer</a></li>
+      <li><a href="#">Donate</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact Us</a></li>
       <li>
@@ -53,6 +44,34 @@
       </li>
     </ul>
   </nav>
+  <main class="bg-grad">
+    <section id="volunteer-section">
+      <div id="volunteer-items">
+        <h2>Volunteer</h2>
+        <div class="volunteer-item">
+            <h3>Who Can Volunteer?</h3>
+            <div id="who-svg" class="volunteer-item-svg"></div>
+        </div>
+        <div class="volunteer-item">
+            <h3>Become A Volunteer</h3>
+            <div id="volunteer-svg" class="volunteer-item-svg"></div>
+        </div>
+        <div class="volunteer-item">
+            <h3>Volunteer Training</h3>
+            <div id="training-svg" class="volunteer-item-svg"></div>
+        </div>
+      </div>
+    </section>
+    <section id="donate-section">
+
+    </section>
+    <section id="about-section">
+
+    </section>
+    <section id="contact-section">
+      
+    </section>
+  </main>
 
 </body>
 

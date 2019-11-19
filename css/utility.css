@@ -75,4 +75,9 @@ a[class^='btn-primary']:hover {
   width: 100%;
   text-align: center;
 }
+
+.bg-grad {
+  background: -webkit-gradient(linear, left top, left bottom, from(#00437a), color-stop(35%, #002b4d), to(#00223d));
+  background: linear-gradient(180deg, #00437a 0%, #002b4d 35%, #00223d 100%);
+}
 /*# sourceMappingURL=utility.css.map */

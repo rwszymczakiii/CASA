@@ -1,55 +1,56 @@
 @import "./vars.scss";
 
-nav {
+body {
+  
+  nav {
     position: fixed;
     top: 0px;
     width: 100%;
+    height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.5rem 4rem;
-  
+    align-content: center;
+    padding: 0 4rem;
+    background: #fff;
+    
     #logo {
       width: 4%;
+      align-self: center;
     }
-  
+    
     #title {
-      display: none;
-      font-size: 1.5rem;
-      width: 100%;
-  
-      h1 {
-        color: #fff;
-        font-size: 3.5rem;
-        font-weight: 500;
-  
-        span {
-          color: $brand-red;
-        }
-      }
+      font-size: 2rem;
+      color: $brand-blue;
+      align-self: center;
     }
-  
+    
     #secondary-nav-links {
       display: flex;
       flex-direction: row;
-      margin-right: 7rem;
-  
+      margin-right: 3rem;
+      
       li {
         align-self: center;
         margin: 0 2rem;
-  
+        
+        a {
+
+          color: $brand-blue;
+        }
+        
         div {
           width: 50px;
         }
       }
-  
+    
       .menu-wrap {
         z-index: 2;
         display: grid;
         grid-template-rows: [row-1] 1fr [row-2] 1fr;
         position: absolute;
-        top: 2rem;
-        right: 10rem;
+        top: 20px;
+        right: 6rem;
   
         .menu {
           grid-area: row-2/row-2;
@@ -64,7 +65,7 @@ nav {
             margin-left: 10rem;
           }
         }
-  
+    
         .toggler {
           grid-area: row-1/row-1;
           z-index: 2;
@@ -77,8 +78,8 @@ nav {
             + .hamburger > div {
               transform: rotate(135deg);
   
-              &:before,
-              &:after {
+              &::before,
+              &::after {
                 top: 0;
                 transform: rotate(90deg);
               }
@@ -101,7 +102,7 @@ nav {
             }
           }
         }
-  
+    
         .hamburger {
           grid-area: row-1/row-1;
           z-index: 1;
@@ -122,6 +123,7 @@ nav {
             align-items: center;
             justify-content: center;
             transition: all 0.4s ease;
+            background: $brand-blue;
   
             &::before,
             &::after {
@@ -142,3 +144,41 @@ nav {
       }
     }
   }
+  main {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    color: #fff;
+
+    #volunteer-section { 
+
+      #volunteer-items {
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        .volunteer-item {
+
+          .volunteer-item-svg {
+            height: 50px;
+            width: auto;
+            
+          }
+
+          #who-svg {
+            background: url(../assets/img/users-solid.svg) no-repeat;
+          }
+
+          #volunteer-svg {
+            background: url(../assets/img/heart-regular.svg) no-repeat;
+          }
+
+          #training-svg {
+            background: url(../assets/img/chalkboard-teacher-solid.svg) no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

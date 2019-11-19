@@ -1,7 +1,8 @@
-nav {
+body nav {
   position: fixed;
   top: 0px;
   width: 100%;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,30 +13,28 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1.5rem 4rem;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0 4rem;
+  background: #fff;
 }
 
-nav #logo {
+body nav #logo {
   width: 4%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-nav #title {
-  display: none;
-  font-size: 1.5rem;
-  width: 100%;
+body nav #title {
+  font-size: 2rem;
+  color: #00437A;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-nav #title h1 {
-  color: #fff;
-  font-size: 3.5rem;
-  font-weight: 500;
-}
-
-nav #title h1 span {
-  color: #E9221E;
-}
-
-nav #secondary-nav-links {
+body nav #secondary-nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,32 +42,36 @@ nav #secondary-nav-links {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-right: 7rem;
+  margin-right: 3rem;
 }
 
-nav #secondary-nav-links li {
+body nav #secondary-nav-links li {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   margin: 0 2rem;
 }
 
-nav #secondary-nav-links li div {
+body nav #secondary-nav-links li a {
+  color: #00437A;
+}
+
+body nav #secondary-nav-links li div {
   width: 50px;
 }
 
-nav #secondary-nav-links .menu-wrap {
+body nav #secondary-nav-links .menu-wrap {
   z-index: 2;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: [row-1] 1fr [row-2] 1fr;
       grid-template-rows: [row-1] 1fr [row-2] 1fr;
   position: absolute;
-  top: 2rem;
-  right: 10rem;
+  top: 20px;
+  right: 6rem;
 }
 
-nav #secondary-nav-links .menu-wrap .menu {
+body nav #secondary-nav-links .menu-wrap .menu {
   grid-area: row-2/row-2;
   width: 100%;
   height: 100%;
@@ -76,7 +79,7 @@ nav #secondary-nav-links .menu-wrap .menu {
   margin-top: 2rem;
 }
 
-nav #secondary-nav-links .menu-wrap .menu ul {
+body nav #secondary-nav-links .menu-wrap .menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,7 +90,7 @@ nav #secondary-nav-links .menu-wrap .menu ul {
   margin-left: 10rem;
 }
 
-nav #secondary-nav-links .menu-wrap .toggler {
+body nav #secondary-nav-links .menu-wrap .toggler {
   grid-area: row-1/row-1;
   z-index: 2;
   cursor: pointer;
@@ -96,34 +99,34 @@ nav #secondary-nav-links .menu-wrap .toggler {
   opacity: 0;
 }
 
-nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div {
+body nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
 }
 
-nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div:before, nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div:after {
+body nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div::before, body nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div::after {
   top: 0;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
-nav #secondary-nav-links .menu-wrap .toggler:checked:hover + .hamburger > div {
+body nav #secondary-nav-links .menu-wrap .toggler:checked:hover + .hamburger > div {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
 }
 
-nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu {
+body nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu {
   visibility: visible;
 }
 
-nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu > div > div {
+body nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu > div > div {
   opacity: 1;
   margin-left: -30rem;
   -webkit-transition: all 0.4s ease 0.4s;
   transition: all 0.4s ease 0.4s;
 }
 
-nav #secondary-nav-links .menu-wrap .hamburger {
+body nav #secondary-nav-links .menu-wrap .hamburger {
   grid-area: row-1/row-1;
   z-index: 1;
   width: 60px;
@@ -140,7 +143,7 @@ nav #secondary-nav-links .menu-wrap .hamburger {
           justify-content: center;
 }
 
-nav #secondary-nav-links .menu-wrap .hamburger > div {
+body nav #secondary-nav-links .menu-wrap .hamburger > div {
   position: relative;
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -159,9 +162,10 @@ nav #secondary-nav-links .menu-wrap .hamburger > div {
           justify-content: center;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  background: #00437A;
 }
 
-nav #secondary-nav-links .menu-wrap .hamburger > div::before, nav #secondary-nav-links .menu-wrap .hamburger > div::after {
+body nav #secondary-nav-links .menu-wrap .hamburger > div::before, body nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -171,7 +175,35 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::before, nav #secondary-nav
   background: inherit;
 }
 
-nav #secondary-nav-links .menu-wrap .hamburger > div::after {
+body nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   top: 10px;
+}
+
+body main {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  color: #fff;
+}
+
+body main #volunteer-section #volunteer-items h2 {
+  font-size: 2rem;
+}
+
+body main #volunteer-section #volunteer-items .volunteer-item .volunteer-item-svg {
+  height: 50px;
+  width: auto;
+}
+
+body main #volunteer-section #volunteer-items .volunteer-item #who-svg {
+  background: url(../assets/img/users-solid.svg) no-repeat;
+}
+
+body main #volunteer-section #volunteer-items .volunteer-item #volunteer-svg {
+  background: url(../assets/img/heart-regular.svg) no-repeat;
+}
+
+body main #volunteer-section #volunteer-items .volunteer-item #training-svg {
+  background: url(../assets/img/chalkboard-teacher-solid.svg) no-repeat;
 }
 /*# sourceMappingURL=main.css.map */

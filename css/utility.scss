@@ -80,3 +80,7 @@ a[class^='btn-primary']:hover {
     text-align: center;
   }
 }
+
+.bg-grad {
+  background: linear-gradient(180deg, rgba(0,67,122,1) 0%, rgba(0,43,77,1) 35%, rgba(0,34,61,1) 100%);
+}
