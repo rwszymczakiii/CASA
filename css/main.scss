@@ -1,18 +1,46 @@
 @import "./vars.scss";
 
 body {
+  // CLASSES
+  .section-items {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    height: $section-items-height;
+    padding: 0 5rem;
+    align-items: center;
+    z-index: 5;
   
+    .section-item {
+      width: 100%;
+      color: $brand-blue;
+  
+      &-svg {
+        margin: 1rem;
+      }
+  
+      h3 {
+        text-align: center;
+      }
+  
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  // NAVIGATION
   nav {
     position: fixed;
     top: 0px;
     width: 100%;
-    height: 100px;
+    height: $nav-height;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
     padding: 0 4rem;
     background: #fff;
+    z-index: 10000;
     
     #logo {
       width: 4%;
@@ -29,13 +57,19 @@ body {
       display: flex;
       flex-direction: row;
       margin-right: 3rem;
+
+      #visible-links {
+        display: flex;
+        flex-direction: row;
+        transition: all 0.4s ease 0.4s;
+        margin-bottom: 0rem;
+      }
       
       li {
         align-self: center;
         margin: 0 2rem;
         
         a {
-
           color: $brand-blue;
         }
         
@@ -49,20 +83,18 @@ body {
         display: grid;
         grid-template-rows: [row-1] 1fr [row-2] 1fr;
         position: absolute;
-        top: 20px;
-        right: 6rem;
+        top: 35px;
   
         .menu {
-          grid-area: row-2/row-2;
-          width: 100%;
-          height: 100%;
-          visibility: hidden;
-          margin-top: 2rem;
+          grid-area: row-1/row-1;
+          position: absolute;
+          left: -450px;
+          top: 35px;
+          opacity: 0;
   
           ul {
             display: flex;
             flex-direction: row;
-            margin-left: 10rem;
           }
         }
     
@@ -90,13 +122,12 @@ body {
             }
   
             ~ .menu {
-              visibility: visible;
+              transition: all 0.4s ease 0.4s;
+              opacity: 1;
   
               > div {
                 > div {
                   opacity: 1;
-                  margin-left: -30rem;
-                  transition: all 0.4s ease 0.4s;
                 }
               }
             }
@@ -144,39 +175,201 @@ body {
       }
     }
   }
+
   main {
     position: absolute;
-    top: 100px;
+    top: $nav-height;
     width: 100%;
-    color: #fff;
 
     #volunteer-section { 
+      height: $section-height;
 
-      #volunteer-items {
+      #volunteer-img{
+        background-image: url(../assets/img/man-and-teen.jpg);
+        background-size: cover;
+        height: $section-img-height;
+        background-attachment: fixed;
+        background-position-x: center;
+        background-position-y: 55%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
 
-        h2 {
-          font-size: 2rem;
+        #text {
+          z-index: 5;
+          text-align: center;
+
+          h2 {
+            font-size: 4rem;
+          } 
+  
+          p {
+            font-size: 1.5rem;
+            font-weight: 300;
+          }
         }
 
-        .volunteer-item {
+        ::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: $section-img-height;
+          width: 100%;
+          background: #222;
+          opacity: 0.1;
+          z-index: -5;
+        }
+      }
 
-          .volunteer-item-svg {
-            height: 50px;
-            width: auto;
-          }
+      #who-svg {
+        background: url(../assets/img/users-solid.svg) center no-repeat;
+      }
 
-          #who-svg {
-            background: url(../assets/img/users-solid.svg) no-repeat;
-          }
+      #volunteer-svg {
+        background: url(../assets/img/heart-regular.svg) center no-repeat;
+      }
 
-          #volunteer-svg {
-            background: url(../assets/img/heart-regular.svg) no-repeat;
-          }
+      #training-svg {
+        background: url(../assets/img/chalkboard-teacher-solid.svg) center no-repeat;
+      }
+    }
+    #donate-section { 
+      position: relative;
+      top: -$section-gap;
 
-          #training-svg {
-            background: url(../assets/img/chalkboard-teacher-solid.svg) no-repeat;
+      #donate-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $section-img-height;
+        width: 100%;
+        background: #000;
+        opacity: 0.2;
+        z-index: 1;
+      }
+
+      #donate-img{
+        background-image: url(../assets/img/donate.jpg);
+        background-size: cover;
+        height: $section-img-height;
+        background-position-x: center;
+        background-position-y: 80%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        .donate-text-div {
+          text-align: center;
+          width: 33%;
+          color: #fff;
+          z-index: 5;
+
+          h2 {
+            font-size: 4rem;
+          } 
+
+          p {
+            font-size: 1.5rem;
+            font-weight: 300;
           }
         }
+      }
+
+      #mail-svg {
+        background: url(../assets/img/envelope-regular.svg) center no-repeat;
+      }
+      #mail-p {
+        text-align: center;
+        line-height: 1.8;
+      }
+
+      #donate-svg {
+        background: url(../assets/img/hand-holding-heart-solid.svg) center no-repeat;
+      }
+
+      #bbb-svg {
+        background: url(../assets/img/BBB.jpg) center no-repeat;
+        background-size: contain;
+      }
+      #bbb-p {
+        width: 60%;
+        font-size: 0.5rem;
+        text-align: center;
+        margin-left: 4.5rem;
+      }
+    }
+
+    #about-section { 
+      position: relative;
+      top: -$section-gap;
+
+      #about-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $section-img-height;
+        width: 100%;
+        background: #000;
+        opacity: 0.2;
+        z-index: 1;
+      }
+
+      #about-img{
+        background-image: url(../assets/img/about.jpg);
+        background-size: cover;
+        height: $section-img-height;
+        background-position-x: center;
+        background-position-y: 80%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        .about-text-div {
+          text-align: center;
+          width: 33%;
+          color: #fff;
+          z-index: 5;
+
+          h2 {
+            font-size: 4rem;
+          } 
+
+          p {
+            font-size: 1.5rem;
+            font-weight: 300;
+          }
+        }
+      }
+
+      #mail-svg {
+        background: url(../assets/img/envelope-regular.svg) center no-repeat;
+      }
+      #mail-p {
+        text-align: center;
+        line-height: 1.8;
+      }
+
+      #about-svg {
+        background: url(../assets/img/hand-holding-heart-solid.svg) center no-repeat;
+      }
+
+      #bbb-svg {
+        background: url(../assets/img/BBB.jpg) center no-repeat;
+        background-size: contain;
+      }
+      #bbb-p {
+        width: 60%;
+        font-size: 0.5rem;
+        text-align: center;
+        margin-left: 4.5rem;
       }
     }
   }

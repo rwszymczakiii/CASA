@@ -1,8 +1,42 @@
+body .section-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #fff;
+  height: 23vh;
+  padding: 0 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+}
+
+body .section-items .section-item {
+  width: 100%;
+  color: #00437A;
+}
+
+body .section-items .section-item-svg {
+  margin: 1rem;
+}
+
+body .section-items .section-item h3 {
+  text-align: center;
+}
+
+body .section-items .section-item:hover {
+  cursor: pointer;
+}
+
 body nav {
   position: fixed;
   top: 0px;
   width: 100%;
-  height: 100px;
+  height: 14vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,6 +51,7 @@ body nav {
       align-content: center;
   padding: 0 4rem;
   background: #fff;
+  z-index: 10000;
 }
 
 body nav #logo {
@@ -45,6 +80,19 @@ body nav #secondary-nav-links {
   margin-right: 3rem;
 }
 
+body nav #secondary-nav-links #visible-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-transition: all 0.4s ease 0.4s;
+  transition: all 0.4s ease 0.4s;
+  margin-bottom: 0rem;
+}
+
 body nav #secondary-nav-links li {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -67,16 +115,15 @@ body nav #secondary-nav-links .menu-wrap {
   -ms-grid-rows: [row-1] 1fr [row-2] 1fr;
       grid-template-rows: [row-1] 1fr [row-2] 1fr;
   position: absolute;
-  top: 20px;
-  right: 6rem;
+  top: 35px;
 }
 
 body nav #secondary-nav-links .menu-wrap .menu {
-  grid-area: row-2/row-2;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  margin-top: 2rem;
+  grid-area: row-1/row-1;
+  position: absolute;
+  left: -450px;
+  top: 35px;
+  opacity: 0;
 }
 
 body nav #secondary-nav-links .menu-wrap .menu ul {
@@ -87,7 +134,6 @@ body nav #secondary-nav-links .menu-wrap .menu ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-left: 10rem;
 }
 
 body nav #secondary-nav-links .menu-wrap .toggler {
@@ -116,14 +162,13 @@ body nav #secondary-nav-links .menu-wrap .toggler:checked:hover + .hamburger > d
 }
 
 body nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu {
-  visibility: visible;
+  -webkit-transition: all 0.4s ease 0.4s;
+  transition: all 0.4s ease 0.4s;
+  opacity: 1;
 }
 
 body nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu > div > div {
   opacity: 1;
-  margin-left: -30rem;
-  -webkit-transition: all 0.4s ease 0.4s;
-  transition: all 0.4s ease 0.4s;
 }
 
 body nav #secondary-nav-links .menu-wrap .hamburger {
@@ -181,29 +226,229 @@ body nav #secondary-nav-links .menu-wrap .hamburger > div::after {
 
 body main {
   position: absolute;
-  top: 100px;
+  top: 14vh;
   width: 100%;
+}
+
+body main #volunteer-section {
+  height: 86vh;
+}
+
+body main #volunteer-section #volunteer-img {
+  background-image: url(../assets/img/man-and-teen.jpg);
+  background-size: cover;
+  height: 60vh;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: 55%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
 }
 
-body main #volunteer-section #volunteer-items h2 {
-  font-size: 2rem;
+body main #volunteer-section #volunteer-img #text {
+  z-index: 5;
+  text-align: center;
 }
 
-body main #volunteer-section #volunteer-items .volunteer-item .volunteer-item-svg {
-  height: 50px;
-  width: auto;
+body main #volunteer-section #volunteer-img #text h2 {
+  font-size: 4rem;
 }
 
-body main #volunteer-section #volunteer-items .volunteer-item #who-svg {
-  background: url(../assets/img/users-solid.svg) no-repeat;
+body main #volunteer-section #volunteer-img #text p {
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
-body main #volunteer-section #volunteer-items .volunteer-item #volunteer-svg {
-  background: url(../assets/img/heart-regular.svg) no-repeat;
+body main #volunteer-section #volunteer-img ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60vh;
+  width: 100%;
+  background: #222;
+  opacity: 0.1;
+  z-index: -5;
 }
 
-body main #volunteer-section #volunteer-items .volunteer-item #training-svg {
-  background: url(../assets/img/chalkboard-teacher-solid.svg) no-repeat;
+body main #volunteer-section #who-svg {
+  background: url(../assets/img/users-solid.svg) center no-repeat;
+}
+
+body main #volunteer-section #volunteer-svg {
+  background: url(../assets/img/heart-regular.svg) center no-repeat;
+}
+
+body main #volunteer-section #training-svg {
+  background: url(../assets/img/chalkboard-teacher-solid.svg) center no-repeat;
+}
+
+body main #donate-section {
+  position: relative;
+  top: -3vh;
+}
+
+body main #donate-section #donate-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60vh;
+  width: 100%;
+  background: #000;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+body main #donate-section #donate-img {
+  background-image: url(../assets/img/donate.jpg);
+  background-size: cover;
+  height: 60vh;
+  background-position-x: center;
+  background-position-y: 80%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #donate-section #donate-img .donate-text-div {
+  text-align: center;
+  width: 33%;
+  color: #fff;
+  z-index: 5;
+}
+
+body main #donate-section #donate-img .donate-text-div h2 {
+  font-size: 4rem;
+}
+
+body main #donate-section #donate-img .donate-text-div p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+body main #donate-section #mail-svg {
+  background: url(../assets/img/envelope-regular.svg) center no-repeat;
+}
+
+body main #donate-section #mail-p {
+  text-align: center;
+  line-height: 1.8;
+}
+
+body main #donate-section #donate-svg {
+  background: url(../assets/img/hand-holding-heart-solid.svg) center no-repeat;
+}
+
+body main #donate-section #bbb-svg {
+  background: url(../assets/img/BBB.jpg) center no-repeat;
+  background-size: contain;
+}
+
+body main #donate-section #bbb-p {
+  width: 60%;
+  font-size: 0.5rem;
+  text-align: center;
+  margin-left: 4.5rem;
+}
+
+body main #about-section {
+  position: relative;
+  top: -3vh;
+}
+
+body main #about-section #about-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60vh;
+  width: 100%;
+  background: #000;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+body main #about-section #about-img {
+  background-image: url(../assets/img/about.jpg);
+  background-size: cover;
+  height: 60vh;
+  background-position-x: center;
+  background-position-y: 80%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #about-section #about-img .about-text-div {
+  text-align: center;
+  width: 33%;
+  color: #fff;
+  z-index: 5;
+}
+
+body main #about-section #about-img .about-text-div h2 {
+  font-size: 4rem;
+}
+
+body main #about-section #about-img .about-text-div p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+body main #about-section #mail-svg {
+  background: url(../assets/img/envelope-regular.svg) center no-repeat;
+}
+
+body main #about-section #mail-p {
+  text-align: center;
+  line-height: 1.8;
+}
+
+body main #about-section #about-svg {
+  background: url(../assets/img/hand-holding-heart-solid.svg) center no-repeat;
+}
+
+body main #about-section #bbb-svg {
+  background: url(../assets/img/BBB.jpg) center no-repeat;
+  background-size: contain;
+}
+
+body main #about-section #bbb-p {
+  width: 60%;
+  font-size: 0.5rem;
+  text-align: center;
+  margin-left: 4.5rem;
 }
 /*# sourceMappingURL=main.css.map */

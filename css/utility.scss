@@ -55,9 +55,10 @@ h1,
 h2,
 h3 {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
-// Buttons
+Buttons
 %btn-shared {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -79,8 +80,23 @@ a[class^='btn-primary']:hover {
     width: 100%;
     text-align: center;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .bg-grad {
   background: linear-gradient(180deg, rgba(0,67,122,1) 0%, rgba(0,43,77,1) 35%, rgba(0,34,61,1) 100%);
+}
+
+.hover-icon {
+  height: 65px;
+  width: auto;
+  transition: all ease-in-out 0.3s;
+
+  &:hover {
+    height: 80px;
+    cursor: pointer;
+  }
 }

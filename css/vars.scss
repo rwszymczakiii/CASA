@@ -2,3 +2,11 @@ $brand-blue: #00437A;
 $brand-red: #E9221E;
 $medium-color: #ccc;
 $dark-color: #333;
+
+$main-gradient: linear-gradient(180deg, rgba(0,67,122,1) 0%, rgba(0,43,77,1) 35%, rgba(0,34,61,1) 100%);
+
+$nav-height: 14vh;
+$section-height: 100vh - $nav-height;
+$section-img-height: 60vh;
+$section-gap: 3vh;
+$section-items-height: $section-height - $section-img-height - $section-gap;

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/utility.css">
   <link rel="stylesheet" href="./css/hamburger.css">
   <script defer src="https://kit.fontawesome.com/1047bc795e.js"></script>
+  <script defer src="./js/hamburger.js"></script>
 </head>
 
 <body>
@@ -20,13 +21,15 @@
     </a>
     <h1 id="title">Goochland CASA</h1>
     <ul id="secondary-nav-links">
-      <li><a href="#">Volunteer</a></li>
-      <li><a href="#">Donate</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact Us</a></li>
+      <div id="visible-links">
+        <li><a href="#">Volunteer</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </div>
       <li>
         <div class="menu-wrap">
-          <input type="checkbox" class="toggler">
+          <input type="checkbox" class="toggler" id="hamburger-checkbox">
           <div class="hamburger">
             <div></div>
           </div>
@@ -36,7 +39,7 @@
                 <ul>
                   <li><a href="#">Gallery</a></li>
                   <li><a href="#">History</a></li>
-                  <li><a href="#">Board of Directors</a></li>
+                  <li><a href="#">Board&nbspof&nbspDirectors</a></li>
                 </ul>
               </div>
             </div>
@@ -45,33 +48,91 @@
       </li>
     </ul>
   </nav>
-  <main class="bg-grad">
+
+  <main>
+    <!-- VOLUNTEER -->
     <section id="volunteer-section">
-      <div id="volunteer-items">
-        <h2>Volunteer</h2>
-        <div class="volunteer-item">
-          <div id="who-svg" class="volunteer-item-svg"></div>
+      <div id="volunteer-img">
+        <div id="text">
+          <h2>Volunteer</h2>
+          <p>You could change the life of a child</p>
+        </div>
+      </div>
+      <div class="section-items">
+        <div class="section-item">
+          <div id="who-svg" class="section-item-svg hover-icon"></div>
           <h3>Who Can Volunteer?</h3>
         </div>
-        <div class="volunteer-item">
-          <div id="volunteer-svg" class="volunteer-item-svg"></div>
+        <div class="section-item">
+          <div id="volunteer-svg" class="section-item-svg hover-icon"></div>
           <h3>Become A Volunteer</h3>
         </div>
-        <div class="volunteer-item">
-          <div id="training-svg" class="volunteer-item-svg"></div>
+        <div class="section-item">
+          <div id="training-svg" class="section-item-svg hover-icon"></div>
           <h3>Volunteer Training</h3>
         </div>
       </div>
     </section>
+    <!-- DONATE -->
     <section id="donate-section">
-
+      <div id="donate-overlay"></div>
+      <div id="donate-img">
+        <div class="donate-text-div">
+          <h2>Donate</h2>
+          <p>Your contribution matters</p>
+        </div>
+        <div class="donate-text-div">
+            <p>Some compelling <br>donation information</p>
+        </div>
+      </div>
+      <div class="section-items">
+        <div class="section-item">
+          <p id="mail-p">
+            Checks and Money Orders can be mailed to:<br>
+            Goochland CASA<br>
+            P.O. Box 910<br>
+            Goochland, VA 23063
+          </p>
+        </div>
+        <div class="section-item">
+          <a href="https://www.connectva.org/nonprofit-directory/">
+            <div id="donate-svg" class="section-item-svg hover-icon"></div>
+          </a>
+            <h3>Secure Online Donations</h3>
+        </div>
+        <div class="section-item">
+          <div id="bbb-svg" class="section-item-svg hover-icon"></div>
+          <p id="bbb-p">Goochland CASA is a non-profit organization under section 501(c)(3) of the United States Internal Revenue Code. All donations to Goochland CASA are tax deductible.</p>
+        </div>
+      </div>
     </section>
+    <!-- ABOUT -->
     <section id="about-section">
+      <div id="about-overlay"></div>
+      <div id="about-img">
+        <div class="about-text-div"></div>
+        <div class="about-text-div">
+          <h2>About Us</h2>
+          <p>Your contribution matters</p>
+        </div>
+      </div>
+      <div class="section-items">
+        <div class="section-item">
+          <h3>Secure Online Donations</h3>
+        </div>
+        <div class="section-item">
+          <h3>Secure Online Donations</h3>
+        </div>
+        <div class="section-item">
+          <div id="bbb-svg" class="section-item-svg hover-icon"></div>
+          <p id="bbb-p">Goochland CASA is a non-profit organization under section 501(c)(3) of the United States Internal Revenue Code. All donations to Goochland CASA are tax deductible.</p>
+        </div>
+      </div>
+    </section>
 
-    </section>
     <section id="contact-section">
-      
     </section>
+
   </main>
 
 </body>

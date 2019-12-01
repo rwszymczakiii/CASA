@@ -53,9 +53,10 @@ h1,
 h2,
 h3 {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
-.btn-primary {
+Buttons .btn-primary {
   display: inline-block;
   padding: 0.8rem 2rem;
   -webkit-transition: all 0.5s;
@@ -76,8 +77,24 @@ a[class^='btn-primary']:hover {
   text-align: center;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .bg-grad {
   background: -webkit-gradient(linear, left top, left bottom, from(#00437a), color-stop(35%, #002b4d), to(#00223d));
   background: linear-gradient(180deg, #00437a 0%, #002b4d 35%, #00223d 100%);
+}
+
+.hover-icon {
+  height: 65px;
+  width: auto;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.hover-icon:hover {
+  height: 80px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=utility.css.map */
