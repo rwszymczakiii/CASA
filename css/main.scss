@@ -248,7 +248,7 @@ body {
         height: $section-img-height;
         width: 100%;
         background: #000;
-        opacity: 0.2;
+        opacity: 0.3;
         z-index: 1;
       }
 
@@ -316,60 +316,43 @@ body {
         height: $section-img-height;
         width: 100%;
         background: #000;
-        opacity: 0.2;
+        opacity: 0.4;
         z-index: 1;
       }
 
       #about-img{
-        background-image: url(../assets/img/about.jpg);
+        background-image: url(../assets/img/family-pic-4.jpg);
         background-size: cover;
         height: $section-img-height;
-        background-position-x: center;
-        background-position-y: 80%;
+        background-position-x: 20%;
+        background-position-y: 50%;
         background-repeat: no-repeat;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        color: #fff;
         
-        .about-text-div {
-          text-align: center;
-          width: 33%;
-          color: #fff;
+        h2 {
+          font-size: 4rem;
           z-index: 5;
+        }
 
-          h2 {
-            font-size: 4rem;
-          } 
+        #about-buttons {
+          z-index: 5;
+          display: flex;
+          flex-direction: row;
 
-          p {
-            font-size: 1.5rem;
-            font-weight: 300;
+          .btn {
+            // outline: #fff solid 2px;
+            background: $brand-blue;
+            margin: 2rem 5rem;
+
+            &:hover {
+              background: $brand-red;
+            }  
           }
         }
-      }
-
-      #mail-svg {
-        background: url(../assets/img/envelope-regular.svg) center no-repeat;
-      }
-      #mail-p {
-        text-align: center;
-        line-height: 1.8;
-      }
-
-      #about-svg {
-        background: url(../assets/img/hand-holding-heart-solid.svg) center no-repeat;
-      }
-
-      #bbb-svg {
-        background: url(../assets/img/BBB.jpg) center no-repeat;
-        background-size: contain;
-      }
-      #bbb-p {
-        width: 60%;
-        font-size: 0.5rem;
-        text-align: center;
-        margin-left: 4.5rem;
       }
     }
   }

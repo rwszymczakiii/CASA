@@ -58,7 +58,7 @@ h3 {
   font-weight: 400;
 }
 
-Buttons
+// Buttons
 %btn-shared {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -72,8 +72,9 @@ a[class^='btn-primary']:hover {
 }
 
 .btn {
+  @extend %btn-shared;
+
   &-primary {
-    @extend %btn-shared;
     color: #fff;
     background-color: $brand-red;
     font-weight: 300;
