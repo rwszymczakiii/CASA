@@ -1,3 +1,7 @@
+body {
+  background: #00437A;
+}
+
 body .section-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -349,13 +353,16 @@ body main #donate-section #donate-img .donate-text-div p {
   font-weight: 300;
 }
 
+body main #donate-section #envelope-svg {
+  background: url(../assets/img/envelope-regular.svg) center no-repeat;
+}
+
 body main #donate-section #mail-svg {
   background: url(../assets/img/envelope-regular.svg) center no-repeat;
 }
 
 body main #donate-section #mail-p {
   text-align: center;
-  line-height: 1.8;
 }
 
 body main #donate-section #donate-svg {
@@ -369,9 +376,9 @@ body main #donate-section #bbb-svg {
 
 body main #donate-section #bbb-p {
   width: 60%;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   text-align: center;
-  margin-left: 4.5rem;
+  margin-left: 6rem;
 }
 
 body main #about-section {
@@ -397,44 +404,50 @@ body main #about-section #about-img {
   background-position-x: 20%;
   background-position-y: 50%;
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  z-index: -1;
+}
+
+body main #about-section h2, body main #about-section .about-btn, body main #about-section p {
   color: #fff;
+  z-index: 5;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
 }
 
-body main #about-section #about-img h2 {
+body main #about-section h2 {
   font-size: 4rem;
-  z-index: 5;
+  top: 30%;
+  left: 40%;
 }
 
-body main #about-section #about-img #about-buttons {
-  z-index: 5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-body main #about-section #about-img #about-buttons .btn {
+body main #about-section .about-btn {
   background: #00437A;
-  margin: 2rem 5rem;
+  width: 150px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  top: 55%;
 }
 
-body main #about-section #about-img #about-buttons .btn:hover {
+body main #about-section .about-btn:hover {
   background: #E9221E;
+}
+
+body main #about-section #mission {
+  left: 35%;
+}
+
+body main #about-section #what-is {
+  left: 55%;
+}
+
+body main #about-section p {
+  top: 20%;
+  left: 150%;
+}
+
+body main #contact-section {
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

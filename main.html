@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="./css/utility.css">
   <link rel="stylesheet" href="./css/hamburger.css">
   <script defer src="https://kit.fontawesome.com/1047bc795e.js"></script>
+  <!-- https://fontawesome.com/license -->
   <script defer src="./js/hamburger.js"></script>
+  <script defer src="./js/about.js"></script>
 </head>
 
 <body>
@@ -48,7 +50,7 @@
       </li>
     </ul>
   </nav>
-
+  <!-- MAIN -->
   <main>
     <!-- VOLUNTEER -->
     <section id="volunteer-section">
@@ -87,10 +89,10 @@
       </div>
       <div class="section-items">
         <div class="section-item">
+          <div id="envelope-svg" class="section-item-svg hover-icon"></div>
           <p id="mail-p">
             Checks and Money Orders can be mailed to:<br>
-            Goochland CASA<br>
-            P.O. Box 910<br>
+            Goochland CASA, P.O. Box 910<br>
             Goochland, VA 23063
           </p>
         </div>
@@ -109,19 +111,39 @@
     <!-- ABOUT -->
     <section id="about-section">
       <div id="about-overlay"></div>
-      <div id="about-img">
-        <h2>About Us</h2>
-        <div id="about-buttons">
-          <div class="btn">Our Mission</div>
-          <div class="btn">What Is CASA?</div>
-        </div>
-      </div>
+      <div id="about-img"></div>
+      <h2 id="about-title">About Us</h2>
+      <div class="btn about-btn" id="mission">Our Mission</div>
+      <p id="mission-p">This is our mission</p>
+      <div class="btn about-btn" id="what-is">What Is CASA?</div>
+      <p id="what-is-p">This is what CASA is</p>
     </section>
-
+    <!-- CONTACT -->
     <section id="contact-section">
+      <h2>Contact</h2>
+      <form action="">
+        <div class="form-div">
+          <label for="name">Your Name</label>
+          <input type="text" placeholder="John Doe">
+        </div>
+        <div class="form-div">
+          <label for="email">Your Email</label>
+          <input type="email" placeholder="JohnDoe@email.com">
+        </div>
+        <div class="form-div">
+          <label for="message">Your Message</label>
+          <input type="text" placeholder="Leave us a message...">
+        </div>
+        <button type="submit">Send</button>
+      </form>
     </section>
-
   </main>
+   <!-- FOOTER -->
+  <footer>
+      <p>Copyright &copy; 2019, Goochland CASA</p>
+      <p>|</p>
+      <p>Designed and Developed by <a href="https://robbieszy.com" id="my-github">Robbie Szymczak</a></p>
+  </footer>
 
 </body>
 

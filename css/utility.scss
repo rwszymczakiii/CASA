@@ -24,6 +24,7 @@
   font-weight: bold;
 }
 
+// GENERAL
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +37,7 @@
   // only works in chrome
 }
 
+// ELEMENTS
 body {
   line-height: 1.6;
   font-size: 14px;
@@ -87,6 +89,7 @@ a[class^='btn-primary']:hover {
   }
 }
 
+// CLASSES
 .bg-grad {
   background: linear-gradient(180deg, rgba(0,67,122,1) 0%, rgba(0,43,77,1) 35%, rgba(0,34,61,1) 100%);
 }
@@ -100,4 +103,14 @@ a[class^='btn-primary']:hover {
     height: 80px;
     cursor: pointer;
   }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.3;
 }

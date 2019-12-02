@@ -1,6 +1,7 @@
 @import "./vars.scss";
 
 body {
+  background: $brand-blue;
   // CLASSES
   .section-items {
     display: flex;
@@ -225,6 +226,7 @@ body {
         }
       }
 
+
       #who-svg {
         background: url(../assets/img/users-solid.svg) center no-repeat;
       }
@@ -237,6 +239,7 @@ body {
         background: url(../assets/img/chalkboard-teacher-solid.svg) center no-repeat;
       }
     }
+
     #donate-section { 
       position: relative;
       top: -$section-gap;
@@ -281,12 +284,15 @@ body {
         }
       }
 
+      #envelope-svg {
+        background: url(../assets/img/envelope-regular.svg) center no-repeat;
+      }
+
       #mail-svg {
         background: url(../assets/img/envelope-regular.svg) center no-repeat;
       }
       #mail-p {
         text-align: center;
-        line-height: 1.8;
       }
 
       #donate-svg {
@@ -299,9 +305,9 @@ body {
       }
       #bbb-p {
         width: 60%;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         text-align: center;
-        margin-left: 4.5rem;
+        margin-left: 6rem;
       }
     }
 
@@ -327,33 +333,54 @@ body {
         background-position-x: 20%;
         background-position-y: 50%;
         background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        
-        h2 {
-          font-size: 4rem;
-          z-index: 5;
-        }
-
-        #about-buttons {
-          z-index: 5;
-          display: flex;
-          flex-direction: row;
-
-          .btn {
-            // outline: #fff solid 2px;
-            background: $brand-blue;
-            margin: 2rem 5rem;
-
-            &:hover {
-              background: $brand-red;
-            }  
-          }
-        }
+        z-index: -1;
       }
+
+      %about-contents {
+        color: #fff;
+        z-index: 5;
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+      }
+        
+      h2 {
+        font-size: 4rem;
+        @extend %about-contents;
+        top: 30%;
+        left: 40%;
+      }
+
+      .about-btn {
+        @extend %about-contents;
+        background: $brand-blue;
+        width: 150px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        top: 55%;
+
+        &:hover {
+          background: $brand-red;
+        }  
+      }
+
+      #mission {
+        left: 35%;
+      }
+
+      #what-is {
+        left: 55%;
+      }
+
+      p {
+        @extend %about-contents;
+        top: 20%;
+        left: 150%;
+      }
+    }
+
+    #contact-section {
+      color: #fff;
     }
   }
 }
