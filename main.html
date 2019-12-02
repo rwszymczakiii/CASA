@@ -8,10 +8,9 @@
   <title>Goochland CASA</title>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/utility.css">
-  <link rel="stylesheet" href="./css/hamburger.css">
   <script defer src="https://kit.fontawesome.com/1047bc795e.js"></script>
   <!-- https://fontawesome.com/license -->
-  <script defer src="./js/nav.js"></script>
+  <script defer src="./js/mainNav.js"></script>
   <script defer src="./js/hamburger.js"></script>
   <script defer src="./js/about.js"></script>
 </head>
@@ -25,10 +24,10 @@
     <h1 id="title">Goochland CASA</h1>
     <ul id="secondary-nav-links">
       <div id="visible-links">
-        <li><a href="#" id="main-volunteer-link">Volunteer</a></li>
-        <li><a href="#" id="main-donate-link">Donate</a></li>
-        <li><a href="#" id="main-about-link">About</a></li>
-        <li><a href="#" id="main-contact-link">Contact Us</a></li>
+        <li><a href="#" id="main-volunteer-link" class="bold-hover" title="volunteer">Volunteer</a></li>
+        <li><a href="#" id="main-donate-link" class="bold-hover" title="Donate">Donate</a></li>
+        <li><a href="#" id="main-about-link" class="bold-hover" title="About">About</a></li>
+        <li><a href="#" id="main-contact-link" class="bold-hover" title="Contact Us">Contact Us</a></li>
       </div>
       <li>
         <div class="menu-wrap">
@@ -40,9 +39,9 @@
             <div>
               <div>
                 <ul>
-                  <li><a href="#">Gallery</a></li>
-                  <li><a href="#">History</a></li>
-                  <li><a href="#">Board&nbspof&nbspDirectors</a></li>
+                  <li><a href="#" class="bold-hover" title="Gallery">Gallery</a></li>
+                  <li><a href="#" class="bold-hover" title="History">History</a></li>
+                  <li><a href="#" class="bold-hover" title="Board&nbspof&nbspDirectors">Board&nbspof&nbspDirectors</a></li>
                 </ul>
               </div>
             </div>
@@ -74,6 +73,8 @@
           <div id="training-svg" class="section-item-svg hover-icon"></div>
           <h3>Volunteer Training</h3>
         </div>
+        <!-- hacky fix for scrollIntoView  -->
+        <div id="donate-start"></div> 
       </div>
     </section>
     <!-- DONATE -->
@@ -107,6 +108,7 @@
           <div id="bbb-svg" class="section-item-svg hover-icon"></div>
           <p id="bbb-p">Goochland CASA is a non-profit organization under section 501(c)(3) of the United States Internal Revenue Code. All donations to Goochland CASA are tax deductible.</p>
         </div>
+        <div id="about-start"></div>
       </div>
     </section>
     <!-- ABOUT -->
@@ -133,19 +135,17 @@
         </div>
         <div class="form-div">
           <label for="message">Your Message</label>
-          <input type="text" placeholder="Leave us a message...">
+          <input type="text" id="form-message" placeholder="Leave us a message...">
         </div>
-        <button type="submit">Send</button>
+        <button type="submit" id="send-btn" class="btn about-btn">Send</button>
       </form>
     </section>
-  </main>
-   <!-- FOOTER -->
-  <footer>
+    <!-- FOOTER -->
+    <footer>
       <p>Copyright &copy; 2019, Goochland CASA</p>
       <p>|</p>
-      <p>Designed and Developed by <a href="https://robbieszy.com" id="my-github">Robbie Szymczak</a></p>
-  </footer>
-
+      <p>Designed and Developed by <a href="https://robbieszy.com" class="bold-hover" title="Robbie Szymczak">Robbie Szymczak</a></p>
+    </footer>
+  </main>
 </body>
-
 </html>

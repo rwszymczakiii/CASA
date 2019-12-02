@@ -181,7 +181,8 @@ body {
     position: absolute;
     top: $nav-height;
     width: 100%;
-
+    overflow: hidden;
+    // VOLUNTEER SECTION
     #volunteer-section { 
       height: $section-height;
 
@@ -226,7 +227,6 @@ body {
         }
       }
 
-
       #who-svg {
         background: url(../assets/img/users-solid.svg) center no-repeat;
       }
@@ -239,7 +239,7 @@ body {
         background: url(../assets/img/chalkboard-teacher-solid.svg) center no-repeat;
       }
     }
-
+    // DONATE SECTION
     #donate-section { 
       position: relative;
       top: -$section-gap;
@@ -310,7 +310,7 @@ body {
         margin-left: 6rem;
       }
     }
-
+    // ABOUT SECTION
     #about-section { 
       position: relative;
       top: -$section-gap;
@@ -347,7 +347,7 @@ body {
         font-size: 4rem;
         @extend %about-contents;
         top: 30%;
-        left: 40%;
+        left: 39%;
       }
 
       .about-btn {
@@ -365,7 +365,7 @@ body {
       }
 
       #mission {
-        left: 35%;
+        left: 34%;
       }
 
       #what-is {
@@ -380,7 +380,62 @@ body {
     }
 
     #contact-section {
+      position: relative;
+      top: -$section-gap;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      margin: auto;
+
+      h2 {
+        font-size: 4rem;
+        margin: 4rem 0;
+      }
+
+      form {
+        width: 100%;
+
+        .form-div {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1rem;
+
+          label {
+            margin-bottom: 0.5rem;
+          }
+
+          input {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+          }
+
+          #form-message {
+            padding: 0.5rem 4rem 6rem 0.5rem;
+          }
+        }
+
+        #send-btn {
+          padding: 0.7rem 2rem;
+
+          &:hover {
+            background: $dark-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+    footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 3rem 0 1rem 0;
+      color: #fff;
+
+      p {
+        margin: 1rem;
+      }
     }
   }
 }

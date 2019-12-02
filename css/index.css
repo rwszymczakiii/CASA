@@ -269,6 +269,13 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
       justify-self: center;
   background: 0%;
   border: none;
+  opacity: 0.6;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#showcase-content button:hover {
+  opacity: 0.8;
 }
 
 #showcase-content button:focus {
@@ -329,9 +336,5 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
 
 #showcase-content footer p {
   margin-right: 1rem;
-}
-
-#showcase-content footer #my-github:hover {
-  color: #00437A;
 }
 /*# sourceMappingURL=index.css.map */

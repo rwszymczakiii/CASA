@@ -77,13 +77,12 @@ a[class^='btn-primary']:hover {
   text-align: center;
 }
 
-.btn:hover {
-  cursor: pointer;
+.btn-primary:hover {
+  color: #00437A;
 }
 
-.bg-grad {
-  background: -webkit-gradient(linear, left top, left bottom, from(#00437a), color-stop(35%, #002b4d), to(#00223d));
-  background: linear-gradient(180deg, #00437a 0%, #002b4d 35%, #00223d 100%);
+.btn:hover {
+  cursor: pointer;
 }
 
 .hover-icon {
@@ -106,5 +105,22 @@ a[class^='btn-primary']:hover {
   left: 0;
   background: #000;
   opacity: 0.3;
+}
+
+.bold-hover:hover {
+  font-weight: 600;
+}
+
+.bold-hover::after {
+  content: attr(title);
+  visibility: hidden;
+  overflow: hidden;
+  font-weight: bold;
+  display: block;
+  height: 0;
+}
+
+.my-github:hover {
+  font-weight: bold;
 }
 /*# sourceMappingURL=utility.css.map */

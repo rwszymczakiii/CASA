@@ -232,6 +232,7 @@ body main {
   position: absolute;
   top: 14vh;
   width: 100%;
+  overflow: hidden;
 }
 
 body main #volunteer-section {
@@ -418,7 +419,7 @@ body main #about-section h2, body main #about-section .about-btn, body main #abo
 body main #about-section h2 {
   font-size: 4rem;
   top: 30%;
-  left: 40%;
+  left: 39%;
 }
 
 body main #about-section .about-btn {
@@ -435,7 +436,7 @@ body main #about-section .about-btn:hover {
 }
 
 body main #about-section #mission {
-  left: 35%;
+  left: 34%;
 }
 
 body main #about-section #what-is {
@@ -448,6 +449,81 @@ body main #about-section p {
 }
 
 body main #contact-section {
+  position: relative;
+  top: -3vh;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  margin: auto;
+}
+
+body main #contact-section h2 {
+  font-size: 4rem;
+  margin: 4rem 0;
+}
+
+body main #contact-section form {
+  width: 100%;
+}
+
+body main #contact-section form .form-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+body main #contact-section form .form-div label {
+  margin-bottom: 0.5rem;
+}
+
+body main #contact-section form .form-div input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+body main #contact-section form .form-div #form-message {
+  padding: 0.5rem 4rem 6rem 0.5rem;
+}
+
+body main #contact-section form #send-btn {
+  padding: 0.7rem 2rem;
+}
+
+body main #contact-section form #send-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+body main footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3rem 0 1rem 0;
+  color: #fff;
+}
+
+body main footer p {
+  margin: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
