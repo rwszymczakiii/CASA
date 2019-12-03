@@ -1,4 +1,8 @@
-nav {
+body {
+  overflow: hidden;
+}
+
+body nav {
   position: fixed;
   top: 0px;
   width: 100%;
@@ -15,27 +19,27 @@ nav {
   padding: 1.5rem 4rem;
 }
 
-nav #logo {
+body nav #logo {
   width: 4%;
 }
 
-nav #title {
+body nav #title {
   display: none;
   font-size: 1.5rem;
   width: 100%;
 }
 
-nav #title h1 {
+body nav #title h1 {
   color: #fff;
   font-size: 3.5rem;
   font-weight: 500;
 }
 
-nav #title h1 span {
+body nav #title h1 span {
   color: #E9221E;
 }
 
-nav #secondary-nav-links {
+body nav #secondary-nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,18 +50,18 @@ nav #secondary-nav-links {
   margin-right: 7rem;
 }
 
-nav #secondary-nav-links li {
+body nav #secondary-nav-links li {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   margin: 0 2rem;
 }
 
-nav #secondary-nav-links li div {
+body nav #secondary-nav-links li div {
   width: 50px;
 }
 
-nav #secondary-nav-links .menu-wrap {
+body nav #secondary-nav-links .menu-wrap {
   z-index: 2;
   display: -ms-grid;
   display: grid;
@@ -68,7 +72,7 @@ nav #secondary-nav-links .menu-wrap {
   right: 10rem;
 }
 
-nav #secondary-nav-links .menu-wrap .menu {
+body nav #secondary-nav-links .menu-wrap .menu {
   grid-area: row-2/row-2;
   width: 100%;
   height: 100%;
@@ -76,7 +80,7 @@ nav #secondary-nav-links .menu-wrap .menu {
   margin-top: 2rem;
 }
 
-nav #secondary-nav-links .menu-wrap .menu ul {
+body nav #secondary-nav-links .menu-wrap .menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,7 +91,7 @@ nav #secondary-nav-links .menu-wrap .menu ul {
   margin-left: 10rem;
 }
 
-nav #secondary-nav-links .menu-wrap .toggler {
+body nav #secondary-nav-links .menu-wrap .toggler {
   grid-area: row-1/row-1;
   z-index: 2;
   cursor: pointer;
@@ -96,34 +100,34 @@ nav #secondary-nav-links .menu-wrap .toggler {
   opacity: 0;
 }
 
-nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div {
+body nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
 }
 
-nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div:before, nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div:after {
+body nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div:before, body nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div:after {
   top: 0;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
-nav #secondary-nav-links .menu-wrap .toggler:checked:hover + .hamburger > div {
+body nav #secondary-nav-links .menu-wrap .toggler:checked:hover + .hamburger > div {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
 }
 
-nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu {
+body nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu {
   visibility: visible;
 }
 
-nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu > div > div {
+body nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu > div > div {
   opacity: 1;
   margin-left: -30rem;
   -webkit-transition: all 0.4s ease 0.4s;
   transition: all 0.4s ease 0.4s;
 }
 
-nav #secondary-nav-links .menu-wrap .hamburger {
+body nav #secondary-nav-links .menu-wrap .hamburger {
   grid-area: row-1/row-1;
   z-index: 1;
   width: 60px;
@@ -140,7 +144,7 @@ nav #secondary-nav-links .menu-wrap .hamburger {
           justify-content: center;
 }
 
-nav #secondary-nav-links .menu-wrap .hamburger > div {
+body nav #secondary-nav-links .menu-wrap .hamburger > div {
   position: relative;
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -161,7 +165,7 @@ nav #secondary-nav-links .menu-wrap .hamburger > div {
   transition: all 0.4s ease;
 }
 
-nav #secondary-nav-links .menu-wrap .hamburger > div::before, nav #secondary-nav-links .menu-wrap .hamburger > div::after {
+body nav #secondary-nav-links .menu-wrap .hamburger > div::before, body nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -171,11 +175,11 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::before, nav #secondary-nav
   background: inherit;
 }
 
-nav #secondary-nav-links .menu-wrap .hamburger > div::after {
+body nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   top: 10px;
 }
 
-.fullscreen-video-wrap {
+body .fullscreen-video-wrap {
   position: absolute;
   top: 0;
   left: 0;
@@ -185,19 +189,19 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   z-index: -1;
 }
 
-.fullscreen-video-wrap #showcase-video-frame {
+body .fullscreen-video-wrap #showcase-video-frame {
   background-image: url(../assets/img/two-girls.jpg);
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
-.fullscreen-video-wrap video {
+body .fullscreen-video-wrap video {
   min-width: 100%;
   min-height: 100%;
 }
 
-.bg-grad-trans {
+body .bg-grad-trans {
   position: absolute;
   top: 0;
   left: 0;
@@ -208,14 +212,14 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   z-index: -1;
 }
 
-.bg-grad-trans p {
+body .bg-grad-trans p {
   position: absolute;
   top: 92.5vh;
   left: 80vw;
   color: #fff;
 }
 
-#showcase-content {
+body #showcase-content {
   height: 100vh;
   max-width: 100%;
   display: -ms-grid;
@@ -227,40 +231,40 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   margin: 0 4rem;
 }
 
-#showcase-content #logo {
+body #showcase-content #logo {
   width: 6%;
   margin-top: 2rem;
 }
 
-#showcase-content #title {
+body #showcase-content #title {
   grid-area: row-3/col-1/row-3/col-3;
   font-size: 1.5rem;
   width: 100%;
 }
 
-#showcase-content #title h1 {
+body #showcase-content #title h1 {
   color: #fff;
   font-size: 3.5rem;
   font-weight: 500;
 }
 
-#showcase-content #title h1 span {
+body #showcase-content #title h1 span {
   color: #E9221E;
 }
 
-#showcase-content #title-expanded {
+body #showcase-content #title-expanded {
   margin-left: 20.4rem;
   margin-top: -0.25rem;
 }
 
-#showcase-content #title-expanded p {
+body #showcase-content #title-expanded p {
   color: #fff;
   font-size: 0.75rem;
   font-weight: 300;
   margin-bottom: 0.25rem;
 }
 
-#showcase-content button {
+body #showcase-content button {
   grid-area: row-3/col-2/row-5/col-3;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -274,22 +278,22 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   transition: all 0.4s ease-in-out;
 }
 
-#showcase-content button:hover {
+body #showcase-content button:hover {
   opacity: 0.8;
 }
 
-#showcase-content button:focus {
+body #showcase-content button:focus {
   outline: none;
 }
 
-#showcase-content button img {
+body #showcase-content button img {
   z-index: 2;
   width: 100px;
   height: auto;
   cursor: pointer;
 }
 
-#showcase-content ul {
+body #showcase-content ul {
   grid-area: row-3/col-3/row-5/col-4;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -298,27 +302,28 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
       align-self: center;
 }
 
-#showcase-content ul li {
+body #showcase-content ul li {
   margin: 4rem 0;
 }
 
-#showcase-content .slogan {
+body #showcase-content .slogan {
   grid-area: row-6/col-3/row-6/col-4;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  margin-bottom: 2rem;
 }
 
-#showcase-content .slogan p {
+body #showcase-content .slogan p {
   font-family: tornac, sans-serif;
   color: #fff;
   font-size: 2rem;
   font-weight: 300;
 }
 
-#showcase-content footer {
+body #showcase-content footer {
   grid-area: row-6/col-1/row-6/col-3;
   -ms-flex-item-align: center;
       align-self: center;
@@ -332,9 +337,10 @@ nav #secondary-nav-links .menu-wrap .hamburger > div::after {
   color: #fff;
   font-size: 0.75rem;
   font-weight: 300;
+  margin-bottom: 1rem;
 }
 
-#showcase-content footer p {
+body #showcase-content footer p {
   margin-right: 1rem;
 }
 /*# sourceMappingURL=index.css.map */
