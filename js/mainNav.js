@@ -2,6 +2,9 @@ const mainVolunteerLink = document.getElementById('main-volunteer-link');
 const mainDonateLink = document.getElementById('main-donate-link');
 const mainAboutLink = document.getElementById('main-about-link');
 const mainContactLink = document.getElementById('main-contact-link');
+const mainGalleryLink = document.getElementById('main-gallery-link');
+const mainHistoryLink = document.getElementById('main-history-link');
+const mainBoardLink = document.getElementById('main-board-link');
 const volunteerSection = document.getElementById('volunteer-section');
 const donateStart = document.getElementById('donate-start');
 const aboutStart = document.getElementById('about-start');
@@ -29,4 +32,14 @@ mainAboutLink.addEventListener('click', (e) => {
 mainContactLink.addEventListener('click', (e) => {
   e.preventDefault();
   contactSection.scrollIntoView({behavior: "smooth"});
+});
+
+mainGalleryLink.addEventListener('click', (e) => {
+  location = "./second.html#gallery-section";
+});
+mainHistoryLink.addEventListener('click', (e) => {
+  location = "./second.html#history-section";
+});
+mainBoardLink.addEventListener('click', (e) => {
+  location = "./second.html#board-section";
 });
