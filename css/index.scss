@@ -76,6 +76,15 @@ body {
           height: 50px;
           opacity: 0;
 
+          &:hover + .hamburger > div {
+            transform: rotate(360deg);
+
+            &:before,
+            &:after {
+              transform: rotate(360deg);
+            }
+          }
+
           &:checked {
             + .hamburger > div {
               transform: rotate(135deg);

@@ -9,5 +9,5 @@ secondAboutLink.addEventListener('click', (e) => {
   location = "./main.html#about-start";
 });
 secondContactLink.addEventListener('click', (e) => {
-  location = "./main.html#contact-section";
+  location = "./main.html#contact-start";
 });

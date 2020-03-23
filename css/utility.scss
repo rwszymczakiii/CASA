@@ -78,13 +78,13 @@ a[class^='btn-primary']:hover {
 
   &-primary {
     color: #fff;
-    background-color: $brand-red;
+    background-color: $brand-blue;
     font-weight: 300;
     width: 100%;
     text-align: center;
 
     &:hover {
-      color: $brand-blue;
+      background-color: rgb(0, 49, 88);
     }
   }
 
@@ -94,8 +94,6 @@ a[class^='btn-primary']:hover {
 }
 
 .hover-icon {
-  height: 65px;
-  width: auto;
   transition: all ease-in-out 0.3s;
 
   &:hover {
@@ -129,8 +127,17 @@ a[class^='btn-primary']:hover {
   }
 }
 
+.section-item-svg {
+  height: 65px;
+  width: auto;
+}
+
 .my-github:hover {
   font-weight: bold;
+}
+
+.no-hover:hover {
+  cursor: default !important;
 }
 
 // NAVIGATION
@@ -195,7 +202,9 @@ a[class^='btn-primary']:hover {
         position: absolute;
         left: -450px;
         top: 35px;
+        visibility: hidden;
         opacity: 0;
+
 
         ul {
           display: flex;
@@ -210,6 +219,15 @@ a[class^='btn-primary']:hover {
         width: 50px;
         height: 50px;
         opacity: 0;
+
+        &:hover + .hamburger > div {
+          transform: rotate(360deg);
+
+          &:before,
+          &:after {
+            transform: rotate(360deg);
+          }
+        }
 
         &:checked {
           + .hamburger > div {
@@ -227,6 +245,7 @@ a[class^='btn-primary']:hover {
           }
 
           ~ .menu {
+            visibility: visible;
             transition: all 0.4s ease 0.4s;
             opacity: 1;
 
@@ -244,7 +263,7 @@ a[class^='btn-primary']:hover {
         z-index: 1;
         width: 60px;
         height: 60px;
-        padding: 1rem;
+        padding: 2rem 1rem 1rem 1rem;
         display: flex;
         align-items: center;
         justify-content: center;

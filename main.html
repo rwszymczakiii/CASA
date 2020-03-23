@@ -12,6 +12,7 @@
   <!-- https://fontawesome.com/license -->
   <script defer src="./js/mainNav.js"></script>
   <script defer src="./js/hamburger.js"></script>
+  <script defer src="./js/volunteer.js"></script>
   <script defer src="./js/about.js"></script>
 </head>
 
@@ -52,24 +53,27 @@
   </nav>
   <!-- MAIN -->
   <main>
+    <div id="volunteer-start"></div>
     <!-- VOLUNTEER -->
     <section id="volunteer-section">
-      <div id="volunteer-img">
-        <div id="text">
-          <h2>Volunteer</h2>
-          <p>You could change the life of a child</p>
-        </div>
+      <div id="volunteer-overlay"></div>
+      <div id="volunteer-img"></div>
+      <div id="text">
+        <h2>Volunteer</h2>
+        <p id="main-p">You could change the life of a child</p>
+        <p id="who-can-p" class="volunteer-info">You can volunteer</p>
+        <p id="training-p" class="volunteer-info">Training info</p>
       </div>
-      <div class="section-items">
+      <div id="who-can-btn" class="section-items">
         <div class="section-item">
           <div id="who-svg" class="section-item-svg hover-icon"></div>
           <h3>Who Can Volunteer?</h3>
         </div>
-        <div class="section-item">
+        <div id="become-btn" class="section-item">
           <div id="volunteer-svg" class="section-item-svg hover-icon"></div>
           <h3>Become A Volunteer</h3>
         </div>
-        <div class="section-item">
+        <div id="training-btn" class="section-item">
           <div id="training-svg" class="section-item-svg hover-icon"></div>
           <h3>Volunteer Training</h3>
         </div>
@@ -78,6 +82,7 @@
       </div>
     </section>
     <!-- DONATE -->
+      <!-- !important on no-hover -->
     <section id="donate-section">
       <div id="donate-overlay"></div>
       <div id="donate-img">
@@ -86,12 +91,12 @@
           <p>Your contribution matters</p>
         </div>
         <div class="donate-text-div">
-            <p>Some compelling <br>donation information</p>
+            <p id="donate-text-p-2">When you donate to CASA, you are helping train and support volunteers to advocate for the best interests of children who have experienced abuse or neglect. </p>
         </div>
       </div>
       <div class="section-items">
-        <div class="section-item">
-          <div id="envelope-svg" class="section-item-svg hover-icon"></div>
+        <div class="section-item no-hover">
+          <div id="envelope-svg" class="section-item-svg"></div>
           <p id="mail-p">
             Checks and Money Orders can be mailed to:<br>
             Goochland CASA, P.O. Box 910<br>
@@ -99,13 +104,13 @@
           </p>
         </div>
         <div class="section-item">
-          <a href="https://www.connectva.org/nonprofit-directory/">
+          <a href="https://charity.gofundme.com/o/en/campaign/goochland-casa">
             <div id="donate-svg" class="section-item-svg hover-icon"></div>
           </a>
             <h3>Secure Online Donations</h3>
         </div>
-        <div class="section-item">
-          <div id="bbb-svg" class="section-item-svg hover-icon"></div>
+        <div class="section-item no-hover">
+          <div id="bbb-svg" class="section-item-svg"></div>
           <p id="bbb-p">Goochland CASA is a non-profit organization under section 501(c)(3) of the United States Internal Revenue Code. All donations to Goochland CASA are tax deductible.</p>
         </div>
         <div id="about-start"></div>
@@ -117,13 +122,14 @@
       <div id="about-img"></div>
       <h2 id="about-title">About Us</h2>
       <div class="btn about-btn" id="mission">Our Mission</div>
-      <p id="mission-p">This is our mission</p>
+      <p class="about-p" id="mission-p">Goochland CASA advocates within the Juvenile Court system for the best interest of abused and neglected children guided by the belief that every child is entitled to a safe and permanent home.</p>
       <div class="btn about-btn" id="what-is">What Is CASA?</div>
-      <p id="what-is-p">This is what CASA is</p>
+      <p class="about-p" id="what-is-p">Goochland CASA (Court Appointed Special Advocate) is a member of a network of 951 community-based programs that recruit, train and support citizen-volunteers. These volunteers advocate for the best interests of abused and neglected children in courtrooms and communities. Volunteer advocates, empowered directly by the courts, offer judges the critical information they need to ensure that each child’s rights and needs are being attended to while in foster care. Volunteers stay with children until they are placed in loving permanent homes. For many abused children, a CASA volunteer is the only constant adult presence in their lives.</p>
+      <div id="contact-start"></div>
     </section>
     <!-- CONTACT -->
     <section id="contact-section">
-      <h2>Contact</h2>
+      <h2>Contact</h2> 
       <form action="">
         <div class="form-div">
           <label for="name">Your Name</label>

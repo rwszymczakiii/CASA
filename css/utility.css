@@ -71,14 +71,14 @@ a[class^='btn-primary']:hover {
 
 .btn-primary {
   color: #fff;
-  background-color: #E9221E;
+  background-color: #00437A;
   font-weight: 300;
   width: 100%;
   text-align: center;
 }
 
 .btn-primary:hover {
-  color: #00437A;
+  background-color: #003158;
 }
 
 .btn:hover {
@@ -86,8 +86,6 @@ a[class^='btn-primary']:hover {
 }
 
 .hover-icon {
-  height: 65px;
-  width: auto;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
@@ -120,8 +118,17 @@ a[class^='btn-primary']:hover {
   height: 0;
 }
 
+.section-item-svg {
+  height: 65px;
+  width: auto;
+}
+
 .my-github:hover {
   font-weight: bold;
+}
+
+.no-hover:hover {
+  cursor: default !important;
 }
 
 .main-nav {
@@ -215,6 +222,7 @@ a[class^='btn-primary']:hover {
   position: absolute;
   left: -450px;
   top: 35px;
+  visibility: hidden;
   opacity: 0;
 }
 
@@ -237,6 +245,16 @@ a[class^='btn-primary']:hover {
   opacity: 0;
 }
 
+.main-nav #secondary-nav-links .menu-wrap .toggler:hover + .hamburger > div {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.main-nav #secondary-nav-links .menu-wrap .toggler:hover + .hamburger > div:before, .main-nav #secondary-nav-links .menu-wrap .toggler:hover + .hamburger > div:after {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .main-nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
@@ -254,6 +272,7 @@ a[class^='btn-primary']:hover {
 }
 
 .main-nav #secondary-nav-links .menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
   -webkit-transition: all 0.4s ease 0.4s;
   transition: all 0.4s ease 0.4s;
   opacity: 1;
@@ -268,7 +287,7 @@ a[class^='btn-primary']:hover {
   z-index: 1;
   width: 60px;
   height: 60px;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

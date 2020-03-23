@@ -6,17 +6,21 @@ const mainGalleryLink = document.getElementById('main-gallery-link');
 const mainHistoryLink = document.getElementById('main-history-link');
 const mainBoardLink = document.getElementById('main-board-link');
 const volunteerSection = document.getElementById('volunteer-section');
+const volunteerStart = document.getElementById('volunteer-start');
+const donateSection = document.getElementById('donate-section');
 const donateStart = document.getElementById('donate-start');
 const aboutStart = document.getElementById('about-start');
 const contactSection = document.getElementById('contact-section');
+const toggler = document.getElementById('hamburger-checkbox');
 
 mainVolunteerLink.addEventListener('click', (e) => {
   e.preventDefault();
-  scroll({
-    top:0,
-    left:0,
-    behavior:"smooth"
-  });
+  // scroll({
+  //   top:0,
+  //   left:0,
+  //   behavior:"smooth"
+  // });
+  volunteerStart.scrollIntoView({behavior: "smooth"});
 });
 
 mainDonateLink.addEventListener('click', (e) => {

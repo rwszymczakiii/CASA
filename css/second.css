@@ -44,7 +44,7 @@ body main #gallery-section .gallery {
 }
 
 body main #gallery-section .gallery figure {
-  margin: 1rem;
+  margin: 0.5rem;
   overflow: hidden;
   position: relative;
   height: 250px;

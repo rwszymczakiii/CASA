@@ -100,6 +100,16 @@ body nav #secondary-nav-links .menu-wrap .toggler {
   opacity: 0;
 }
 
+body nav #secondary-nav-links .menu-wrap .toggler:hover + .hamburger > div {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+body nav #secondary-nav-links .menu-wrap .toggler:hover + .hamburger > div:before, body nav #secondary-nav-links .menu-wrap .toggler:hover + .hamburger > div:after {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 body nav #secondary-nav-links .menu-wrap .toggler:checked + .hamburger > div {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);

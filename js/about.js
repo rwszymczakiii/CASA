@@ -4,6 +4,7 @@ const whatIsBtn = document.getElementById('what-is');
 const aboutBtns = document.querySelectorAll('.about-btn');
 const missionP = document.getElementById('mission-p');
 const whatIsP = document.getElementById('what-is-p');
+const overlay = document.getElementById('about-overlay');
 
 const rearrangeAboutItems = () => {
   aboutTitle.style.top = '20%';
@@ -12,6 +13,7 @@ const rearrangeAboutItems = () => {
   missionBtn.style.left = '10%';
   whatIsBtn.style.top = '65%';
   whatIsBtn.style.left = '10%';
+  overlay.style.opacity = 0.65;
 };
 
 aboutBtns.forEach((btn) => {
@@ -19,11 +21,15 @@ aboutBtns.forEach((btn) => {
 });
 
 missionBtn.addEventListener('click', () => {
-  missionP.style.left = '60%';
-  whatIsP.style.left = '150%';
+  whatIsP.style.visibility = 'hidden';
+  setTimeout(function(){
+    missionP.style.visibility = 'visible';
+  }, 500);
 });
 
 whatIsBtn.addEventListener('click', () => {
-  whatIsP.style.left = '60%';
-  missionP.style.left = '150%';
+  missionP.style.visibility = 'hidden';
+  setTimeout(function(){
+    whatIsP.style.visibility = 'visible';
+  }, 500);
 });
