@@ -135,8 +135,12 @@ body main #history-section #history-content {
 }
 
 body main #history-section #history-content h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
+}
+
+body main #history-section #history-content p {
+  margin-right: 5rem;
 }
 
 body main #board-section h3 {

@@ -53,6 +53,7 @@ body {
         height: $section-img-height;
         width: 100%;
         background: #000;
+        transition: all 0.4s ease-in-out;
         opacity: 0.3;
         z-index: 1;
       }
@@ -77,36 +78,37 @@ body {
         position: absolute;
         }
 
-        h2 {
+        #volunteer-h2 {
           @extend %volunteer-contents;
           top: 20%;
           left: 43%;
           font-size: 4rem;
           opacity: 1;
-          opacity: 0;
         } 
 
         p {
           @extend %volunteer-contents;
           font-size: 1.5rem;
           font-weight: 300;
+          text-align: left;
+        }
+
+        #volunteer-p {
+          top: 32%;
+          left: 41%;
           opacity: 1;
         }
 
-        #main-p {
-          top: 32%;
-          left: 41%;
-          opacity: 0;
-        }
-
         #who-can-p {
-          // opacity: 0;
-          top: 10%;
+          opacity: 0;
+          top: 25%;
+          left: 22%;
         }
 
         #training-p {
-          // opacity: 0;
-          top: 10%;
+          opacity: 0;
+          top: 20%;
+          left: 22%;
         }
       }
 

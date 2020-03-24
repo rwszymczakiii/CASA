@@ -59,6 +59,8 @@ body main #volunteer-section #volunteer-overlay {
   height: 60vh;
   width: 100%;
   background: #000;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   opacity: 0.3;
   z-index: 1;
 }
@@ -73,7 +75,7 @@ body main #volunteer-section #volunteer-img {
   background-repeat: no-repeat;
 }
 
-body main #volunteer-section #text h2, body main #volunteer-section #text p {
+body main #volunteer-section #text #volunteer-h2, body main #volunteer-section #text p {
   color: #fff;
   z-index: 5;
   -webkit-transition: all 0.4s ease-in-out;
@@ -82,32 +84,35 @@ body main #volunteer-section #text h2, body main #volunteer-section #text p {
   position: absolute;
 }
 
-body main #volunteer-section #text h2 {
+body main #volunteer-section #text #volunteer-h2 {
   top: 20%;
   left: 43%;
   font-size: 4rem;
   opacity: 1;
-  opacity: 0;
 }
 
 body main #volunteer-section #text p {
   font-size: 1.5rem;
   font-weight: 300;
+  text-align: left;
+}
+
+body main #volunteer-section #text #volunteer-p {
+  top: 32%;
+  left: 41%;
   opacity: 1;
 }
 
-body main #volunteer-section #text #main-p {
-  top: 32%;
-  left: 41%;
-  opacity: 0;
-}
-
 body main #volunteer-section #text #who-can-p {
-  top: 10%;
+  opacity: 0;
+  top: 25%;
+  left: 22%;
 }
 
 body main #volunteer-section #text #training-p {
-  top: 10%;
+  opacity: 0;
+  top: 20%;
+  left: 22%;
 }
 
 body main #volunteer-section #who-svg {

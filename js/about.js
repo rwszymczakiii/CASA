@@ -4,7 +4,7 @@ const whatIsBtn = document.getElementById('what-is');
 const aboutBtns = document.querySelectorAll('.about-btn');
 const missionP = document.getElementById('mission-p');
 const whatIsP = document.getElementById('what-is-p');
-const overlay = document.getElementById('about-overlay');
+const aboutOverlay = document.getElementById('about-overlay');
 
 const rearrangeAboutItems = () => {
   aboutTitle.style.top = '20%';
@@ -13,7 +13,7 @@ const rearrangeAboutItems = () => {
   missionBtn.style.left = '10%';
   whatIsBtn.style.top = '65%';
   whatIsBtn.style.left = '10%';
-  overlay.style.opacity = 0.65;
+  aboutOverlay.style.opacity = 0.65;
 };
 
 aboutBtns.forEach((btn) => {
