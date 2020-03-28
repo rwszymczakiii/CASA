@@ -51,8 +51,8 @@ body main #gallery-section .gallery figure {
 }
 
 body main #gallery-section .gallery figure img {
-  width: auto;
-  height: 255px;
+  max-width: 100%;
+  max-height: auto;
   -webkit-transform: translate3d(0, -20px, 0) scale(1.12);
           transform: translate3d(0, -20px, 0) scale(1.12);
   -webkit-transition: all .5s;
@@ -79,8 +79,8 @@ body main #gallery-section .gallery figure figcaption p {
 
 body main #gallery-section .gallery figure figcaption .additional {
   opacity: 0;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
